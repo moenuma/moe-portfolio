@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
 import styled from '@emotion/styled';
+import './App.css';
 import './star.scss';
-import { Link } from 'react-scroll';
+import { Sidebar } from './components/Sidebar';
 
 export const App: React.FC = () => {
   return (
@@ -10,13 +10,7 @@ export const App: React.FC = () => {
       <div className='stars'></div>
       <div className='stars2'></div>
       <div className='stars3'></div>
-      <SidebarMenu>
-        <Link to="home" className="Nav-item" spy={true} smooth={true} duration={500} offset={-10}>Home</Link>
-        <Link to="profile" className="Nav-item" spy={true} smooth={true} duration={500} offset={-10}>Profile</Link>
-        <Link to="experience" className="Nav-item" spy={true} smooth={true} duration={500}>Experience</Link>
-        <Link to="mywork" className="Nav-item" spy={true} smooth={true} duration={500}>My Work</Link>
-        <Link to="contactme" className="Nav-item" spy={true} smooth={true} duration={500}>Contact Me</Link>
-      </SidebarMenu>
+      <Sidebar />
       <Home id="home">
         <Title>
           <Heading>Moe</Heading>
@@ -58,32 +52,6 @@ const Emoji = styled.span`
   line-height: 3vw;
   margin-left: 10vw;
   padding-bottom: 10vw;
-`;
-
-const SidebarMenu = styled.nav`
-  display: flex;
-  position: fixed;
-  right: 2%;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 50vh;
-  text-align: right;
-  vertical-align: middle;
-  top: 50%;
-  transform: translate(0, -50%) 
-`;
-
-const SidebarItem = styled.div`
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 1vw;
-  color: white;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: white;
-    color: black;
-  }
 `;
 
 const Profile = styled.section`
