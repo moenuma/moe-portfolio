@@ -28,6 +28,32 @@
   color: #61dafb;
 }
 
+.Nav-item {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1vw;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.Nav-item:hover {
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  font-size: 1.05vw;
+}
+
+.active {
+  transition: all 0.2s ease-in-out;
+  color: #66fcf1;
+  font-weight: 600;
+  font-size: 1.05vw;
+}
+.active:hover {
+  font-weight: 600;
+  font-size: 1.05vw;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
