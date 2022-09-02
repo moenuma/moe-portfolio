@@ -9,22 +9,20 @@ export const Profile: React.FC = () => {
   const otherSkills = ['Figma', 'Agile Development', 'Git / GitHub', 'TDD', 'UML'];
     return (
     <ProfileSection id="profile">
-      <Component>
-        <SubTitle>Profile</SubTitle>
-        <Wrapper>
-          <MyImage src={ProfileImage}/>
-          <Texts>
-            <Text>I am a fourth year student, majoring in computer science at the University of Alberta. </Text><br/>
-            <Text>I was born and raised in Japan. But I moved to Malaysia when I was 14 and spent 5 years living there. After high school, I decided to pursue my bachelor's degree in Canada, and here I am! </Text><br/>
-            <Text>My inquiring mind never stops me from learning more about software engineering every single day. I am a fast learner and have great adaptability as I have grown up in different parts of the world throughout my life.</Text><br/>
-          </Texts>
-        </Wrapper>
-        <SkillListsWrapper>
-          <ProfileSkillList title="Backend" skillList={backendSkills} color="#715FA6"/>
-          <ProfileSkillList title="Frontend" skillList={frontendSkills} color="#4C77B6"/>
-          <ProfileSkillList title="Others" skillList={otherSkills} color="#606060"/>
-        </SkillListsWrapper>
-      </Component>
+      <SubTitle>Profile</SubTitle>
+      <ImageTextsWrapper>
+        <MyImage src={ProfileImage}/>
+        <Texts>
+          <Text>I am a fourth year student, majoring in computer science at the University of Alberta. </Text><br/>
+          <Text>I was born and raised in Japan. But I moved to Malaysia when I was 14 and spent 5 years living there. After high school, I decided to pursue my bachelor's degree in Canada, and here I am! </Text><br/>
+          <Text>My inquiring mind never stops me from learning more about software engineering every single day. I am a fast learner and have great adaptability as I have grown up in different parts of the world throughout my life.</Text><br/>
+        </Texts>
+      </ImageTextsWrapper>
+      <SkillListsWrapper>
+        <ProfileSkillList title="Backend" skillList={backendSkills} color="#715FA6"/>
+        <ProfileSkillList title="Frontend" skillList={frontendSkills} color="#4C77B6"/>
+        <ProfileSkillList title="Others" skillList={otherSkills} color="#606060"/>
+      </SkillListsWrapper>
     </ProfileSection>
     );
 }
@@ -36,6 +34,9 @@ const ProfileSection = styled.section`
   height: 100vh;
   top: 100%;
   z-index: 100;
+  padding-left: 19rem;
+  padding-right: 20rem;
+  padding-top: 5rem;
 `;
 
 const SubTitle = styled.h2`
@@ -43,12 +44,6 @@ const SubTitle = styled.h2`
   font-weight: 550;
   margin: 0;
   text-align: center;
-`;
-
-const Component = styled.div`
-  padding-left: 19rem;
-  padding-right: 20rem;
-  padding-top: 5rem;
 `;
 
 const Text = styled.div`
@@ -71,8 +66,8 @@ const MyImage = styled.img`
   border-radius: 15px;
 `;
 
-const Wrapper = styled.div`
-  margin-top: 2rem;
+const ImageTextsWrapper = styled.div`
+  margin-top: 2.5rem;
   display: flex;
   align-items: center;
 `;
