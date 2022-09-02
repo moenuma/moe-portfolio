@@ -4,11 +4,11 @@ import styled from '@emotion/styled';
 export const Home: React.FC = () => {
     return (
     <HomeSection id="home">
-        <Title>
+      <Title>
         <Heading>Moe</Heading>
         <Emoji>👩🏻‍💻💬👩🏻‍🎨💡</Emoji><br/>
         <Heading>Numasawa.</Heading>
-        </Title>
+      </Title>
     </HomeSection>
     );
 }

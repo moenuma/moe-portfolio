@@ -21,6 +21,7 @@ $shadows-big:    multiple-box-shadow(100);
   box-shadow: $shadows-small;
   animation: animStar 50s linear infinite;
   overflow: hidden;
+  z-index: 1;
     
   &:after {
     content: " ";
@@ -39,6 +40,7 @@ $shadows-big:    multiple-box-shadow(100);
   box-shadow: $shadows-medium;
   animation: animStar 100s linear infinite;
   overflow: hidden;
+  z-index: 2;
     
   &:after {
     content: " ";
@@ -57,6 +59,7 @@ $shadows-big:    multiple-box-shadow(100);
   box-shadow: $shadows-big;
   animation: animStar 150s linear infinite;
   overflow: hidden;
+  z-index: 3;
     
   &:after {
     content: " ";
