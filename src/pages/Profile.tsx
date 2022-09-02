@@ -67,12 +67,12 @@ const Texts = styled.div`
 `;
 
 const MyImage = styled.img`
-  width: 215px;
-  border-radius: 120px 50px 250px 150px;
+  width: 200px;
+  border-radius: 15px;
 `;
 
 const Wrapper = styled.div`
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
 `;
