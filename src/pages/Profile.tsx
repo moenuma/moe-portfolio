@@ -9,9 +9,9 @@ export const Profile: React.FC = () => {
   const otherSkills = ['Figma', 'Agile Development', 'Git / GitHub', 'TDD', 'UML'];
     return (
     <ProfileSection id="profile">
-      <SubTitle>Profile</SubTitle>
+      <SectionTitle>Profile</SectionTitle>
       <ImageTextsWrapper>
-        <MyImage src={ProfileImage}/>
+        <MyImage src={ProfileImage} alt="My photo"/>
         <Texts>
           <Text>I am a fourth year student, majoring in computer science at the University of Alberta. </Text><br/>
           <Text>I was born and raised in Japan. But I moved to Malaysia when I was 14 and spent 5 years living there. After high school, I decided to pursue my bachelor's degree in Canada, and here I am! </Text><br/>
@@ -30,20 +30,19 @@ export const Profile: React.FC = () => {
 const ProfileSection = styled.section`
   font-family: 'Roboto', sans-serif;
   font-style: normal; 
-  color: white;
   height: 100vh;
-  top: 100%;
   z-index: 100;
   padding-left: 19rem;
   padding-right: 20rem;
   padding-top: 5rem;
 `;
 
-const SubTitle = styled.h2`
+const SectionTitle = styled.h2`
   font-size: 3rem;
   font-weight: 550;
   margin: 0;
   text-align: center;
+  color: white;
 `;
 
 const Text = styled.div`
@@ -63,7 +62,7 @@ const Texts = styled.div`
 
 const MyImage = styled.img`
   width: 200px;
-  border-radius: 15px;
+  // border-radius: 15px;
 `;
 
 const ImageTextsWrapper = styled.div`
