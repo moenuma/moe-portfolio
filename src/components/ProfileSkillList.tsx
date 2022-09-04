@@ -38,5 +38,6 @@ const Title = styled.div`
     font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 0.5rem;
+    color: white;
 `;
 
