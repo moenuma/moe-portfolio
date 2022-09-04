@@ -30,7 +30,7 @@ const ProfileSkillList: React.FC<ProfileSkillListProps> = ({ title, skillList, c
     margin-bottom: 0.5rem;
     color: white;
   `;
-  
+
   return (
   <Wrapper>
       <Title>{title}</Title>
@@ -40,8 +40,6 @@ const ProfileSkillList: React.FC<ProfileSkillListProps> = ({ title, skillList, c
   </Wrapper>
   );
 }
-
-
 
 export const Profile: React.FC = () => {
   const backendSkills = ['Python (+ Django)', 'Java (+ Spring Boot)', 'C', 'SQL', 'MongoDB'];
