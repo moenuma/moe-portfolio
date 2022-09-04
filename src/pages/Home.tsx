@@ -14,8 +14,6 @@ export const Home: React.FC = () => {
 }
 
 const HomeSection = styled.section`
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
   height: 100vh;
   z-index: 100;
 `;
@@ -31,7 +29,6 @@ const Heading = styled.h1`
   font-weight: 700;
   font-size: 11vw;
   line-height: 9vw;
-  color: white;
   margin: 0;
 `;
 

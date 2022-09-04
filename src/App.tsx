@@ -7,8 +7,10 @@ import { Experience } from './pages/Experience';
 import { background } from './background';
 
 export const App: React.FC = () => {
+  
   useEffect(() => {
     background();
+    
   }, []);
 
   return (

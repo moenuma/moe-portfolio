@@ -123,8 +123,6 @@ export const Experience: React.FC = () => {
 }
 
 const ExperienceSection = styled.section`
-    font-family: 'Roboto', sans-serif;
-    font-style: normal; 
     height: 100vh;
     z-index: 100;
     padding-left: 19rem;
@@ -134,10 +132,9 @@ const ExperienceSection = styled.section`
 
 const SectionTitle = styled.h2`
     font-size: 3rem;
-    font-weight: 550;
+    font-weight: 600;
     margin: 0;
     text-align: center;
-    color: white;
 `;
 
 const Wrapper = styled.div`
@@ -153,10 +150,11 @@ const CompanyIcon = styled.img`
 
 const Card = styled.div`
     margin: 1rem 0;
-    border: 3px solid #2F2F2F;
-    border-radius: 10px;
-    padding: 1.1rem;
-    // box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 `;
 
 const CompanyName = styled.a`
@@ -169,9 +167,7 @@ const CompanyName = styled.a`
     }
 `;
 
-const PositionName = styled.span`
-    color: white;
-`;
+const PositionName = styled.span``;
 
 const ExperienceDate = styled.span`
     color: #B5B5B5;
@@ -190,7 +186,6 @@ const IconMainDescriptionWrapper = styled.div`
 `;
 
 const RolesWrapper = styled.ul`
-    color: white;
     margin-block-start: 0;
     margin-block-end: 0;
     font-size: 1.05rem;
@@ -211,7 +206,6 @@ const DescriptionTitle = styled.span`
 const RolesSkillsWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    color: white;
     margin-left: 0.5rem;
 `;
 
@@ -222,7 +216,6 @@ const SkillsWrapper = styled.div`
 const Skill = styled.span`
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.15);
-    color: white;
     border-radius: 15px;
     padding: 0.2rem 0.5rem;
     margin: 0.25rem 0.3rem;

@@ -28,7 +28,7 @@ const ProfileSkillList: React.FC<ProfileSkillListProps> = ({ title, skillList, c
     font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 0.5rem;
-    color: white;
+    color: var(--primary-text-color);
   `;
 
   return (
@@ -66,8 +66,6 @@ export const Profile: React.FC = () => {
 }
 
 const ProfileSection = styled.section`
-  font-family: 'Roboto', sans-serif;
-  font-style: normal; 
   height: 100vh;
   z-index: 100;
   padding-left: 19rem;
@@ -80,7 +78,6 @@ const SectionTitle = styled.h2`
   font-weight: 550;
   margin: 0;
   text-align: center;
-  color: white;
 `;
 
 const Text = styled.div`
@@ -88,7 +85,6 @@ const Text = styled.div`
   font-size: 1.1rem;
   font-weight: 400;
   margin: 0;
-  color: white;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 `;
