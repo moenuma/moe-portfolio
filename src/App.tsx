@@ -1,17 +1,19 @@
-import React from 'react';
-import './App.css';
-import './star.scss';
+import React, { useEffect } from 'react';
+import './background.css';
 import { Sidebar } from './components/Sidebar';
 import { Home } from './pages/Home';
 import { Profile } from './pages/Profile';
 import { Experience } from './pages/Experience';
+import { background } from './background';
 
 export const App: React.FC = () => {
+  useEffect(() => {
+    background();
+  }, []);
+
   return (
     <>
-      <div className='stars' />
-      <div className='stars2' />
-      <div className='stars3' />
+      <canvas className="orb-canvas" />
       <Sidebar />
       <Home />
       <Profile />
