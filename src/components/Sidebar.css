@@ -1,25 +1,26 @@
 .Sidebar-item {
     text-decoration: none;
     font-weight: 300;
-    font-size: 1vw;
-    color: white;
+    font-size: 1.1rem;
+    color: black;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    /* text-shadow: 1px 1px rgba(165, 165, 165, 0.5); */
 }
   
 .Sidebar-item:hover {
     transition: all 0.2s ease-in-out;
-    font-weight: 500;
-    font-size: 1.05vw;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
 .active {
     transition: all 0.2s ease-in-out;
-    color: #66fcf1;
+    color: black;
     font-weight: 600;
-    font-size: 1.05vw;
+    font-size: 1.4rem;
 }
 .active:hover {
     font-weight: 600;
-    font-size: 1.05vw;
+    font-size: 1.4rem;
 }
