@@ -27,7 +27,7 @@ class ColorPalette {
         // pick a random hue somewhere between 220 and 360
         // this.hue = ~~random(220, 360);
         // TODO change
-        this.hue = 320;
+        this.hue = 280;
         this.complimentaryHue1 = this.hue + 30;
         this.complimentaryHue2 = this.hue + 60;
         // define a fixed saturation and lightness
@@ -102,7 +102,7 @@ export class Orb {
     this.xOff = random(0, 1000);
     this.yOff = random(0, 1000);
     // how quickly the noise/self similar random values step through time
-    this.inc = 0.001;
+    this.inc = 0.00095;
 
     // PIXI.Graphics is used to draw 2d primitives (in this case a circle) to the canvas
     this.graphics = new PIXI.Graphics();
@@ -120,7 +120,7 @@ export class Orb {
     setBounds() {
         // how far from the { x, y } origin can each orb move
         const maxDist =
-            window.innerWidth < 1000 ? window.innerWidth / 2 : window.innerWidth / 3;
+            window.innerWidth < 1000 ? window.innerWidth / 10 : window.innerWidth / 12;
         // the { x, y } origin for each orb (the bottom right of the screen)
         const originX = window.innerWidth / 1.25;
         const originY =
@@ -131,12 +131,12 @@ export class Orb {
         // allow each orb to move x distance away from it's x / y origin
         return {
             x: {
-                min: originX - maxDist,
-                max: originX + maxDist
+                min: window.innerWidth / 4,
+                max: window.innerWidth / 0.9
             },
             y: {
-                min: originY - maxDist,
-                max: originY + maxDist
+                min: window.innerWidth / 5,
+                max: window.innerHeight / 0.9
             }
         };
     }
