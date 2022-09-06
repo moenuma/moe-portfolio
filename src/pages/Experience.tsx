@@ -125,16 +125,16 @@ export const Experience: React.FC = () => {
 const ExperienceSection = styled.section`
     height: 100vh;
     z-index: 100;
-    padding-left: 19rem;
+    padding-left: 15rem;
     padding-right: 20rem;
-    padding-top: 5rem;
+    padding-top: 3rem;
 `;
 
 const SectionTitle = styled.h2`
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0;
-    text-align: center;
+    margin-left: 0.5rem;
 `;
 
 const Wrapper = styled.div`
@@ -151,16 +151,16 @@ const CompanyIcon = styled.img`
 const Card = styled.div`
     margin: 1rem 0;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.375);
+    background: rgba(255, 255, 255, 0.4);
     box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
     border-radius: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.125);
 `;
 
 const CompanyName = styled.a`
-    color: #58a6ff;
+    color: var(--primary-blue);
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     &:hover {
         text-decoration: underline;
@@ -170,7 +170,9 @@ const CompanyName = styled.a`
 const PositionName = styled.span``;
 
 const ExperienceDate = styled.span`
-    color: #B5B5B5;
+    color: var(--gray-text-color);
+    font-size: 0.9rem;
+    font-weight: 600;
 `;
 
 const MainDescription = styled.div`
@@ -215,9 +217,10 @@ const SkillsWrapper = styled.div`
 
 const Skill = styled.span`
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.5);
+    // background-color: white;
     border-radius: 15px;
     padding: 0.2rem 0.5rem;
     margin: 0.25rem 0.3rem;
-    border: 2px solid #949494;
+    border: 1px solid var(--gray-text-color);
 `;
