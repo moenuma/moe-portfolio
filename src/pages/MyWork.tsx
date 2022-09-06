@@ -15,9 +15,10 @@ interface WorkComponentProps {
     description: string;
     languages: string[];
     backgroundImage: string;
+    githubLink: string;
 }
 
-const WorkComponent: React.FC<WorkComponentProps> = ({ title, description, languages, backgroundImage }) => {
+const WorkComponent: React.FC<WorkComponentProps> = ({ title, description, languages, backgroundImage, githubLink }) => {
     const Item = styled.div`
         display: flex;
         border-radius: 10px;
@@ -32,7 +33,7 @@ const WorkComponent: React.FC<WorkComponentProps> = ({ title, description, langu
         color: white;
     `;
     return (
-    <Item>
+    <Item onClick={() => window.open(githubLink, "_blank")}>
         <Content>
             <Title>{title}</Title>
             <Description>{description}</Description>
@@ -49,13 +50,15 @@ function workComponentPropsFactory (
     title: string,
     description: string,
     languages: string[],
-    backgroundImage: string
+    backgroundImage: string,
+    githubLink: string
 ) {
     return {
         title: title,
         description: description,
         languages: languages,
-        backgroundImage: backgroundImage
+        backgroundImage: backgroundImage,
+        githubLink: githubLink
     };
 }
 
@@ -64,19 +67,22 @@ export const MyWork: React.FC = () => {
         "Social Distribution",
         "Social networking web application",
         ["Python", "Django", "React", "Javascript"],
-        SocialMediaImage
+        SocialMediaImage,
+        "https://github.com/CMPUT404W22-GroupProject/social-distribution"
     );
     const alphaDetails = workComponentPropsFactory(
         "Alpha Apps",
         "Habit tracking Android app",
         ["Java", "AndroidStudio"],
-        YogaImage
+        YogaImage,
+        "https://github.com/moenuma/Alpha-Apps"
     );
     const tartanDetails = workComponentPropsFactory(
         "Tartan Smarthome",
         "IoT software project",
         ["Java", "Docker"],
-        HomeImage
+        HomeImage,
+        ""
     );
     const workList = [socialDetails, alphaDetails, tartanDetails];
     return (
@@ -102,6 +108,7 @@ export const MyWork: React.FC = () => {
                             description={work.description}
                             languages={work.languages}
                             backgroundImage={work.backgroundImage}
+                            githubLink={work.githubLink}
                         />
                     </SwiperSlide>)
                 })}
@@ -119,8 +126,8 @@ const Flex = styled.div`
 `;
 
 const MyWorkSection = styled.section`
-  position: relative;
-  height: 100vh;
+    position: relative;
+    height: 90vh;
 `;
 
 const SectionTitle = styled.h2`

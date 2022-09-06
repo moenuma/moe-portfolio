@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './background.css';
+import './App.css';
 import { Sidebar } from './components/Sidebar';
 import { Home } from './pages/Home';
 import { Profile } from './pages/Profile';
