@@ -4,6 +4,7 @@ import { Sidebar } from './components/Sidebar';
 import { Home } from './pages/Home';
 import { Profile } from './pages/Profile';
 import { Experience } from './pages/Experience';
+import { MyWork } from './pages/MyWork';
 import { background } from './background';
 
 export const App: React.FC = () => {
@@ -20,6 +21,7 @@ export const App: React.FC = () => {
       <Home />
       <Profile />
       <Experience />
+      <MyWork />
     </>
   );
 }
