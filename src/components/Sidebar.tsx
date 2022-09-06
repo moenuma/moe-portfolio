@@ -14,7 +14,7 @@ export const Sidebar: React.FC = () => {
     return (
     <SidebarMenu>
         {sidebarItems.map((obj) => {
-            return <Link to={obj.id} className="Sidebar-item" spy={true} smooth={true} duration={500} offset={-50}>{obj.title}</Link>
+            return <Link to={obj.id} className="Sidebar-item" spy={true} smooth={true} duration={500} offset={-100}>{obj.title}</Link>
         })}
     </SidebarMenu>
     );
@@ -22,13 +22,12 @@ export const Sidebar: React.FC = () => {
 
 const SidebarMenu = styled.nav`
   display: flex;
+  z-index:200;
   position: fixed;
   right: 0;
   right: 3%;
-// margin-
   flex-direction: column;
   justify-content: space-between;
-//   margin-top: 3rem;
   min-height: 45vh;
   text-align: right;
   vertical-align: middle;
