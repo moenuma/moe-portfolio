@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import IndeedIcon from '../assets/indeed-icon.jpeg';
 import ArsagaIcon from '../assets/arsaga-icon.jpeg';
+import { Section, SectionTitle } from './Profile';
 
 interface ExperienceComponentProps {
     details: {
@@ -111,31 +112,16 @@ const arsagaDetails = {
 export const Experience: React.FC = () => {
     const experienceList = [indeedDetails, arsagaDetails];
     return (
-    <ExperienceSection id="experience">
+    <Section id="experience">
         <SectionTitle>Experience</SectionTitle>
         <Wrapper>
             {experienceList.map((experience) => {
                 return (<ExperienceComponent details={experience}/>);
             })}
         </Wrapper>
-    </ExperienceSection>
+    </Section>
     );
 }
-
-const ExperienceSection = styled.section`
-    height: 100vh;
-    z-index: 100;
-    padding-left: 15rem;
-    padding-right: 20rem;
-    padding-top: 3rem;
-`;
-
-const SectionTitle = styled.h2`
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0;
-    margin-left: 0.5rem;
-`;
 
 const Wrapper = styled.div`
     display: flex;
@@ -170,7 +156,7 @@ const CompanyName = styled.a`
 const PositionName = styled.span``;
 
 const ExperienceDate = styled.span`
-    color: var(--gray-text-color);
+    color: var(--dark-gray-text-color);
     font-size: 0.9rem;
     font-weight: 600;
 `;
@@ -222,5 +208,5 @@ const Skill = styled.span`
     border-radius: 15px;
     padding: 0.2rem 0.5rem;
     margin: 0.25rem 0.3rem;
-    border: 1px solid var(--gray-text-color);
+    border: 1px solid var(--dark-gray-text-color);
 `;

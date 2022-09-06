@@ -54,7 +54,7 @@ export const Profile: React.FC = () => {
   const frontendSkills = ['HTML', 'CSS', 'Javascript', 'Typescript', 'React'];
   const otherSkills = ['Figma', 'Agile Development', 'Git / GitHub', 'TDD', 'UML'];
     return (
-    <ProfileSection id="profile">
+    <Section id="profile">
       <SectionTitle>Profile</SectionTitle>
       <ImageTextsWrapper>
         <MyImage src={ProfileImage} alt="My photo"/>
@@ -69,19 +69,19 @@ export const Profile: React.FC = () => {
         <ProfileSkillList title="Frontend" skillList={frontendSkills} color="var(--hue-complimentary1)"/>
         <ProfileSkillList title="Others" skillList={otherSkills} color="var(--hue-complimentary2)"/>
       </SkillListsWrapper>
-    </ProfileSection>
+    </Section>
     );
 }
 
-const ProfileSection = styled.section`
+export const Section = styled.section`
   height: 100vh;
   z-index: 100;
   padding-left: 15rem;
   padding-right: 20rem;
-  padding-top: 3rem;
+  // padding-top: 3rem;
 `;
 
-const SectionTitle = styled.h2`
+export const SectionTitle = styled.h2`
   font-size: 3rem;
   font-weight: 700;
   margin: 0;
