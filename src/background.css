@@ -14,7 +14,8 @@
     );
 
     --primary-text-color: black;
-    --gray-text-color: #6B6B6B;
+    --dark-gray-text-color: #6B6B6B;
+    --light-gray-text-color: #E5E5E5;
     --primary-blue: #2455D3;
     --secondary-blue: #5E92DF;
   }
