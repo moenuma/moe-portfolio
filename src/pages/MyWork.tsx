@@ -28,8 +28,8 @@ const WorkComponent: React.FC<WorkComponentProps> = ({ title, description, langu
         background-position: center;
         cursor: pointer;
         aspect-ratio: 1/1.6;
-        padding: 1rem;
-        box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+        padding: 1vw;
+        box-shadow: 0 0.75vw 2vw 0 rgba(0, 0, 0, 0.1);
         color: white;
     `;
     return (
@@ -127,37 +127,38 @@ const Flex = styled.div`
 
 const MyWorkSection = styled.section`
     position: relative;
-    height: 90vh;
+    // height: 100vh;
+    padding-bottom: 10vw;
 `;
 
 const SectionTitle = styled.h2`
-    font-size: 3rem;
+    font-size: 3vw;
     font-weight: 700;
     margin: 0;
-    margin-left: 15.5rem;
-    margin-bottom: 2.5rem;
+    margin-left: 15.5vw;
+    margin-bottom: 2.5vw;
 `;
 
 const Title = styled.h3`
     margin: 0;
-    font-size: 2.7rem;
-    line-height: 2.5rem;
+    font-size: 2.7vw;
+    line-height: 2.5vw;
 `;
 
 const Description = styled.div`
-    margin-top: 0.5rem;
+    margin-top: 0.5vw;
     font-weight: 600;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.2vw;
     color: var(--light-gray-text-color);
 `;
 
 const Content = styled.div`
     align-self: flex-end;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.25vw;
 `;
 
 const Language = styled.span`
-    margin-right: 0.5rem;
+    margin-right: 0.5vw;
     color: var(--light-gray-text-color);
     display: inline-block;
     &:before {

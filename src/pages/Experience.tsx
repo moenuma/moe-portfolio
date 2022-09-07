@@ -126,20 +126,20 @@ export const Experience: React.FC = () => {
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 1vw;
 `;
 
 const CompanyIcon = styled.img`
-    width: 5rem;
-    height: 5rem;
+    width: 5vw;
+    height: 5vw;
 `;
 
 const Card = styled.div`
-    margin: 1rem 0;
-    padding: 1.5rem;
+    margin: 1vw 0;
+    padding: 1.5vw;
     background: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
-    border-radius: 1.5rem;
+    box-shadow: 0 0.75vw 2vw 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1.5vw;
     border: 1px solid rgba(255, 255, 255, 0.125);
 `;
 
@@ -157,7 +157,7 @@ const PositionName = styled.span``;
 
 const ExperienceDate = styled.span`
     color: var(--dark-gray-text-color);
-    font-size: 0.9rem;
+    font-size: 0.9vw;
     font-weight: 600;
 `;
 
@@ -165,8 +165,8 @@ const MainDescription = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0.3rem 1rem;
-    font-size: 1.1rem;
+    margin: 0.3vw 1vw;
+    font-size: 1.1vw;
 `;
 
 const IconMainDescriptionWrapper = styled.div`
@@ -176,25 +176,25 @@ const IconMainDescriptionWrapper = styled.div`
 const RolesWrapper = styled.ul`
     margin-block-start: 0;
     margin-block-end: 0;
-    font-size: 1.05rem;
+    font-size: 1.05vw;
     font-weight: 300;
 `;
 
 const Role = styled.li`
-    margin: 0.2rem 0;
+    margin: 0.2vw 0;
 `;
 
 const DescriptionTitle = styled.span`
-    font-size: 1.1rem;
+    font-size: 1.1vw;
     font-weight: 600;
-    margin-top: 1rem;
-    margin-bottom: 0.3rem;
+    margin-top: 1vw;
+    margin-bottom: 0.3vw;
 `;
 
 const RolesSkillsWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin-left: 0.5rem;
+    margin-left: 0.5vw;
 `;
 
 const SkillsWrapper = styled.div`
@@ -206,7 +206,7 @@ const Skill = styled.span`
     background-color: rgba(255, 255, 255, 0.5);
     // background-color: white;
     border-radius: 15px;
-    padding: 0.2rem 0.5rem;
-    margin: 0.25rem 0.3rem;
+    padding: 0.2vw 0.5vw;
+    margin: 0.25vw 0.3vw;
     border: 1px solid var(--dark-gray-text-color);
 `;

@@ -14,7 +14,7 @@ export const Sidebar: React.FC = () => {
     return (
     <SidebarMenu>
         {sidebarItems.map((obj) => {
-            return <Link to={obj.id} className="Sidebar-item" spy={true} smooth={true} duration={500} offset={-100}>{obj.title}</Link>
+            return <Link to={obj.id} className="Sidebar-item" spy={true} smooth={true} duration={500} offset={-60}>{obj.title}</Link>
         })}
     </SidebarMenu>
     );

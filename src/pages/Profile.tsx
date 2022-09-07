@@ -11,31 +11,31 @@ interface ProfileSkillListProps {
 const ProfileSkillList: React.FC<ProfileSkillListProps> = ({ title, skillList, color }) => {
   const Item = styled.div`
       font-weight: 300;
-      font-size: 1.2rem;
+      font-size: 1.2vw;
       color: black;
       border-radius: 10px;
-      padding: 0.5rem 0;
-      margin: 0.4rem 0;
+      padding: 0.5vw 0;
+      margin: 0.4vw 0;
       background: rgba(255, 255, 255, 0.5);
-      box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.1);
-      border-radius: 1.5rem;
+      box-shadow: 0 0.5vw 2vw 0 rgba(0, 0, 0, 0.1);
+      border-radius: 1.5vw;
       border: 1.5px solid hsl(${color}, 90%, 80%);
   `;
   const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 15rem;
+    width: 15vw;
     background-color: rgba(255, 255, 255, 0.375);
-    padding: 1rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 0.75rem 2rem 0 hsl(${color}, 50%, 70%);
+    padding: 1vw;
+    border-radius: 1.5vw;
+    box-shadow: 0 0.75vw 2vw 0 hsl(${color}, 50%, 70%);
   `;
   const Title = styled.div`
-    font-size: 1.25rem;
+    font-size: 1.25vw;
     font-weight: 700;
     font-style: italic;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5vw;
     color: var(--primary-text-color);
   `;
 
@@ -74,43 +74,42 @@ export const Profile: React.FC = () => {
 }
 
 export const Section = styled.section`
-  height: 100vh;
   z-index: 100;
-  padding-left: 15rem;
-  padding-right: 20rem;
-  // padding-top: 3rem;
+  padding-left: 15vw;
+  padding-right: 20vw;
+  padding-bottom: 5vw;
 `;
 
 export const SectionTitle = styled.h2`
-  font-size: 3rem;
+  font-size: 3vw;
   font-weight: 700;
   margin: 0;
-  margin-left: 0.5rem;
+  margin-left: 0.5vw;
 `;
 
 const Text = styled.div`
   display: inline-block;
-  font-size: 1.15rem;
+  font-size: 1.15vw;
   font-weight: 400;
   margin: 0;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
 `;
 
 const Texts = styled.div`
   text-align: center;
   margin: 0;
-  margin-left: 1rem;
-  padding: 0rem 2rem;
+  margin-left: 1vw;
+  padding: 0vw 2vw;
 `;
 
 const MyImage = styled.img`
   width: 205px;
-  border-radius: 1.5rem;
+  border-radius: 1.5vw;
 `;
 
 const ImageTextsWrapper = styled.div`
-  margin-top: 1.5rem;
+  margin-top: 1.5vw;
   display: flex;
   align-items: center;
 `;
@@ -118,7 +117,7 @@ const ImageTextsWrapper = styled.div`
 const SkillListsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 4rem;
+  margin-top: 4vw;
 `;
 
 const Bold = styled.span`
