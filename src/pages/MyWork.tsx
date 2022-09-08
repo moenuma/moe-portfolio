@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+    fadeInUp,
+    fadeInRight,
+    animationContainer
+} from "../animations/variants";
 import styled from '@emotion/styled';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { myWorkData } from '../data';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import { useAnimation } from "framer-motion";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { myWorkData } from '../data';
-import { motion } from "framer-motion";
-import GitHubIcon from '@mui/icons-material/GitHub';
 
 interface WorkComponentProps {
     id: number;
@@ -86,6 +91,7 @@ const WorkComponent: React.FC<WorkComponentProps> = ({
             animate={hoverAnimationControls}
             onHoverStart={() => {hoverAnimationControls.start(hoverAnimation.anim)}}
             onHoverEnd={() => {hoverAnimationControls.start(hoverAnimation.init)}}
+            variants={fadeInUp}
         >
             <Content>
                 <Title>{title}</Title>
@@ -109,9 +115,27 @@ const WorkComponent: React.FC<WorkComponentProps> = ({
 }
 
 export const MyWork: React.FC = () => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView({
+        threshold: [0.25],
+        triggerOnce: true
+    });
+    useEffect(() => {
+        if (inView) {
+        controls.start("visible");
+        } else {
+        controls.start("hidden");
+        }
+    }, [controls, inView]);
     return (
-    <MyWorkSection id="myWork">
-        <SectionTitle>My Work</SectionTitle>
+    <MyWorkSection
+        id="myWork"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={animationContainer}
+    >
+        <SectionTitle variants={fadeInRight}>My Work</SectionTitle>
         <Flex>
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -143,13 +167,13 @@ const Flex = styled.div`
     align-items: center;
 `;
 
-const MyWorkSection = styled.section`
+const MyWorkSection = styled(motion.section)`
     position: relative;
     padding-bottom: 10vw;
     padding-top: 2vw;
 `;
 
-const SectionTitle = styled.h2`
+const SectionTitle = styled(motion.h2)`
     font-size: 3vw;
     font-weight: 700;
     margin: 0;

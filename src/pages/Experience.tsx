@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import styled from '@emotion/styled';
 import IndeedIcon from '../assets/indeed-icon.jpeg';
 import ArsagaIcon from '../assets/arsaga-icon.jpeg';
 import { Section, SectionTitle } from './Profile';
+import { fadeInRight, animationContainer } from "../animations/variants";
 
 interface ExperienceComponentProps {
     companyIcon: {
@@ -21,7 +24,7 @@ interface ExperienceComponentProps {
 
 const ExperienceComponent: React.FC<ExperienceComponentProps> = ({ companyIcon, mainDescription, roles, skills }) => {
     return (
-    <Card>
+    <Card variants={fadeInRight}>
         <IconMainDescriptionWrapper>
             <CompanyIcon src={companyIcon.src} alt={companyIcon.alt} />
             <MainDescription>
@@ -108,9 +111,28 @@ const arsagaDetails = {
 
 export const Experience: React.FC = () => {
     const experienceList = [indeedDetails, arsagaDetails];
+    const controls = useAnimation();
+    const [ref, inView] = useInView({
+        threshold: [0.25],
+        triggerOnce: true
+    });
+    useEffect(() => {
+        if (inView) {
+        controls.start("visible");
+        } else {
+        controls.start("hidden");
+        }
+    }, [controls, inView]);
+
     return (
-    <Section id="experience">
-        <SectionTitle>Experience</SectionTitle>
+    <Section
+      id="experience"
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={animationContainer}
+    >
+        <SectionTitle variants={fadeInRight}>Experience</SectionTitle>
         <Wrapper>
             {experienceList.map((experience) => {
                 return (<ExperienceComponent {...experience}/>);
@@ -131,7 +153,7 @@ const CompanyIcon = styled.img`
     height: 5vw;
 `;
 
-const Card = styled.div`
+const Card = styled(motion.div)`
     margin: 0.8vw 0;
     padding: 1.5vw;
     background: rgba(255, 255, 255, 0.5);

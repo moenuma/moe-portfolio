@@ -27,3 +27,7 @@ export const myWorkData = [
         backgroundImage: HomeImage
     }
 ];
+
+export const backendSkills = ['Python (+ Django)', 'Java (+ Spring Boot)', 'C', 'SQL', 'MongoDB'];
+export const frontendSkills = ['HTML', 'CSS', 'Javascript', 'Typescript', 'React'];
+export const otherSkills = ['Figma', 'Agile Development', 'Git / GitHub', 'TDD', 'UML'];
