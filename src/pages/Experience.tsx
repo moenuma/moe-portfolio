@@ -134,7 +134,7 @@ const CompanyIcon = styled.img`
 const Card = styled.div`
     margin: 0.8vw 0;
     padding: 1.5vw;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0.75vw 2vw 0 rgba(0, 0, 0, 0.1);
     border-radius: 1.5vw;
     border: 1px solid rgba(255, 255, 255, 0.125);

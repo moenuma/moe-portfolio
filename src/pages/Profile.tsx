@@ -77,7 +77,7 @@ export const Section = styled.section`
   z-index: 100;
   padding-left: 15vw;
   padding-right: 20vw;
-  padding-bottom: 10vw;
+  padding-bottom: 13vw;
   padding-top: 2vw;
 `;
 
