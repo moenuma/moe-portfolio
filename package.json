@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@emotion/styled": "^11.10.0",
+    "@mui/icons-material": "^5.10.3",
     "@pixi/filter-kawase-blur": "^4.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -14,6 +15,7 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "debounce": "^1.2.1",
+    "framer-motion": "^7.2.1",
     "gh-pages": "^4.0.0",
     "hsl-to-hex": "^1.0.0",
     "pixi.js": "^6.5.2",
