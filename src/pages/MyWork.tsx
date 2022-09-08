@@ -57,7 +57,7 @@ const WorkComponent: React.FC<WorkComponentProps> = ({
         font-size: 1vw;
         display: flex;
         justify-content: space-between;
-        border: 1.5px solid white;
+        border: 0.05vw solid white;
         padding: 0.4vw;
         border-radius: 10px;
         display: flex;
@@ -166,12 +166,15 @@ const Title = styled.h3`
 const Description = styled.div`
     margin-top: 0.5vw;
     font-weight: 600;
+    font-size: 1vw;
     margin-bottom: 0.2vw;
 `;
 
 const Language = styled.span`
     margin-right: 0.5vw;
     display: inline-block;
+    font-weight: 500;
+    font-size: 1vw;
     &:before {
         content: "#";
     }
