@@ -1,24 +1,48 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+  fadeInRight,
+  animationContainer
+} from '../animations/variants';
 import styled from '@emotion/styled';
 
 export const Home: React.FC = () => {
-    return (
-    <HomeSection id="home">
-      <Title>
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: [0.25],
+    triggerOnce: true
+  });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+  return (
+    <HomeSection
+      id="home"
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={animationContainer}
+    >
+      <Title variants={fadeInRight}>
         <Heading>Moe</Heading>
         <Emoji>👩🏻‍💻💬👩🏻‍🎨💡</Emoji><br/>
         <Heading>Numasawa.</Heading>
       </Title>
     </HomeSection>
-    );
+  );
 }
 
-const HomeSection = styled.section`
+const HomeSection = styled(motion.section)`
   height: 100vh;
   z-index: 100;
 `;
 
-const Title = styled.div`
+const Title = styled(motion.div)`
   padding-top: 22vw;
   padding-left: 5%;
 `;

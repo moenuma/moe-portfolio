@@ -91,7 +91,6 @@ const WorkComponent: React.FC<WorkComponentProps> = ({
             animate={hoverAnimationControls}
             onHoverStart={() => {hoverAnimationControls.start(hoverAnimation.anim)}}
             onHoverEnd={() => {hoverAnimationControls.start(hoverAnimation.init)}}
-            variants={fadeInUp}
         >
             <Content>
                 <Title>{title}</Title>
@@ -118,7 +117,7 @@ export const MyWork: React.FC = () => {
     const controls = useAnimation();
     const [ref, inView] = useInView({
         threshold: [0.25],
-        triggerOnce: true
+        // triggerOnce: true
     });
     useEffect(() => {
         if (inView) {
@@ -136,7 +135,7 @@ export const MyWork: React.FC = () => {
         variants={animationContainer}
     >
         <SectionTitle variants={fadeInRight}>My Work</SectionTitle>
-        <Flex>
+        <Flex variants={fadeInUp}>
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={25}
@@ -162,11 +161,6 @@ export const MyWork: React.FC = () => {
     );
 }
 
-const Flex = styled.div`
-    display: flex;
-    align-items: center;
-`;
-
 const MyWorkSection = styled(motion.section)`
     position: relative;
     padding-bottom: 10vw;
@@ -179,6 +173,11 @@ const SectionTitle = styled(motion.h2)`
     margin: 0;
     margin-left: 15.5vw;
     margin-bottom: 2.5vw;
+`;
+
+const Flex = styled(motion.div)`
+    display: flex;
+    align-items: center;
 `;
 
 const Title = styled.h3`
