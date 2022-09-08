@@ -10,16 +10,16 @@ interface ProfileSkillListProps {
 
 const ProfileSkillList: React.FC<ProfileSkillListProps> = ({ title, skillList, color }) => {
   const Item = styled.div`
-      font-weight: 300;
-      font-size: 1.2vw;
-      color: black;
-      border-radius: 10px;
-      padding: 0.5vw 0;
-      margin: 0.4vw 0;
-      background: rgba(255, 255, 255, 0.5);
-      box-shadow: 0 0.5vw 2vw 0 rgba(0, 0, 0, 0.1);
-      border-radius: 1.5vw;
-      border: 1.5px solid hsl(${color}, 90%, 80%);
+    font-weight: 300;
+    font-size: 1.2vw;
+    color: black;
+    border-radius: 10px;
+    padding: 0.5vw 0;
+    margin: 0.4vw 0;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0.5vw 2vw 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1.5vw;
+    border: 1.5px solid hsl(${color}, 90%, 80%);
   `;
   const Wrapper = styled.div`
     display: flex;
@@ -77,7 +77,8 @@ export const Section = styled.section`
   z-index: 100;
   padding-left: 15vw;
   padding-right: 20vw;
-  padding-bottom: 5vw;
+  padding-bottom: 10vw;
+  padding-top: 2vw;
 `;
 
 export const SectionTitle = styled.h2`
@@ -104,7 +105,7 @@ const Texts = styled.div`
 `;
 
 const MyImage = styled.img`
-  width: 205px;
+  width: 13vw;
   border-radius: 1.5vw;
 `;
 

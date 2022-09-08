@@ -5,24 +5,21 @@ import ArsagaIcon from '../assets/arsaga-icon.jpeg';
 import { Section, SectionTitle } from './Profile';
 
 interface ExperienceComponentProps {
-    details: {
-        companyIcon: {
-            src: string;
-            alt: string;
-        }
-        mainDescription: {
-            companyName: string;
-            companyLink: string;
-            positionName: string;
-            experienceDate: string;
-        }
-        roles: string[];
-        skills: string[];
+    companyIcon: {
+        src: string;
+        alt: string;
     }
+    mainDescription: {
+        companyName: string;
+        companyLink: string;
+        positionName: string;
+        experienceDate: string;
+    }
+    roles: string[];
+    skills: string[];
 }
 
-const ExperienceComponent: React.FC<ExperienceComponentProps> = ({ details }) => {
-    const { companyIcon, mainDescription, roles, skills } = details;
+const ExperienceComponent: React.FC<ExperienceComponentProps> = ({ companyIcon, mainDescription, roles, skills }) => {
     return (
     <Card>
         <IconMainDescriptionWrapper>
@@ -116,7 +113,7 @@ export const Experience: React.FC = () => {
         <SectionTitle>Experience</SectionTitle>
         <Wrapper>
             {experienceList.map((experience) => {
-                return (<ExperienceComponent details={experience}/>);
+                return (<ExperienceComponent {...experience}/>);
             })}
         </Wrapper>
     </Section>
@@ -135,7 +132,7 @@ const CompanyIcon = styled.img`
 `;
 
 const Card = styled.div`
-    margin: 1vw 0;
+    margin: 0.8vw 0;
     padding: 1.5vw;
     background: rgba(255, 255, 255, 0.4);
     box-shadow: 0 0.75vw 2vw 0 rgba(0, 0, 0, 0.1);
@@ -187,7 +184,7 @@ const Role = styled.li`
 const DescriptionTitle = styled.span`
     font-size: 1.1vw;
     font-weight: 600;
-    margin-top: 1vw;
+    margin-top: 0.8vw;
     margin-bottom: 0.3vw;
 `;
 
@@ -204,9 +201,10 @@ const SkillsWrapper = styled.div`
 const Skill = styled.span`
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.5);
-    // background-color: white;
+    font-size: 1vw;
     border-radius: 15px;
     padding: 0.2vw 0.5vw;
     margin: 0.25vw 0.3vw;
+    margin-bottom: 0;
     border: 1px solid var(--dark-gray-text-color);
 `;
