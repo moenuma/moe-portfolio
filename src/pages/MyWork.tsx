@@ -117,7 +117,7 @@ export const MyWork: React.FC = () => {
     const controls = useAnimation();
     const [ref, inView] = useInView({
         threshold: [0.25],
-        // triggerOnce: true
+        triggerOnce: true
     });
     useEffect(() => {
         if (inView) {

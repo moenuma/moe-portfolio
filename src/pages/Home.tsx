@@ -38,12 +38,13 @@ export const Home: React.FC = () => {
 }
 
 const HomeSection = styled(motion.section)`
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
   z-index: 100;
+  align-items: center;
 `;
 
 const Title = styled(motion.div)`
-  padding-top: 22vw;
   padding-left: 5%;
 `;
 

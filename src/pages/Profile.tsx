@@ -38,8 +38,9 @@ const ProfileSkillList: React.FC<ProfileSkillListProps> = ({ title, skillList, c
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 15vw;
-    background-color: rgba(255, 255, 255, 0.375);
+    width: 16vw;
+    // background-color: rgba(255, 255, 255, 0.375);
+    background-color: hsl(${color}, 70%, 80%);
     padding: 1vw;
     border-radius: 1.5vw;
     box-shadow: 0 0.75vw 2vw 0 hsl(${color}, 50%, 70%);
@@ -66,7 +67,7 @@ export const Profile: React.FC = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: [0.25],
-    // triggerOnce: true
+    triggerOnce: true
   });
   useEffect(() => {
     if (inView) {
