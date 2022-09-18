@@ -1,0 +1,88 @@
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    left: 30px;
+    top: 30px;
+}
+  
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+    background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    height: 22px !important;
+    width: 22px !important;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-right: 14px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #bdc3c7;
+    height: 22px !important;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    background: transparent !important;
+}
+
+.bm-menu {
+    background: #282828;
+    overflow: hidden !important;
+}
+
+.bm-item-list {
+    padding-left: 1.2rem;
+}
+
+.bm-item-list a {
+    display: flex !important;
+    align-items: center;
+    margin-right: 1rem;
+    padding: 0.6rem;
+    padding-right: 5rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+    border-radius: 0.7rem;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.bm-item-list a:hover {
+    background: #3B3B3B;
+    transition: all 0.1s ease-in-out;
+}
+
+.bm-item-list a:first-child {
+    margin-top: 3rem;
+}
+
+.bm-menu a {
+    color: white;
+}
+
+.bm-menu-wrap {
+    left: 0;
+    top: 0;
+    width: auto !important;
+}
+
+.css-tzssek-MuiSvgIcon-root {
+    width: 1.7rem !important;
+    height: 1.7rem !important;
+    margin-right: 0.7rem;
+}
