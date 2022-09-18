@@ -131,7 +131,7 @@ export class Orb {
         // allow each orb to move x distance away from it's x / y origin
         return {
             x: {
-                min: window.innerWidth / 4,
+                min: window.innerWidth / 5,
                 max: window.innerWidth / 0.9
             },
             y: {
