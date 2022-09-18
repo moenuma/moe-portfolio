@@ -136,7 +136,3 @@ const SkillListsWrapper = styled.div`
   justify-content: space-between;
   margin-top: 4vw;
 `;
-
-const Bold = styled.span`
-  font-weight: 600;
-`;

@@ -63,13 +63,6 @@ const Heading = styled.h1`
   letter-spacing: 1vw;
 `;
 
-const Emojis = styled.span`
-  font-size: 3vw;
-  margin-top: 2vw;
-  margin-left: auto;
-  margin-right: auto;
-`;
-
 const AvatorImage = styled.img`
   width: 9vw;
 `;
