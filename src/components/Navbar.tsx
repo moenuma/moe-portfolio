@@ -10,11 +10,11 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
 export const Navbar:React.FC = () => {
     const sidebarItems = [
-        {id: "home", title: 'Home', icon: <HomeOutlinedIcon fontSize='large'/>},
-        {id: "profile", title: 'Profile', icon: <Person2OutlinedIcon fontSize='large'/>},
-        {id: "experience", title: 'Experience', icon: <LightbulbOutlinedIcon fontSize='large' />},
-        {id: "myWork", title: 'My Work', icon: <WorkOutlineOutlinedIcon fontSize='large' />},
-        {id: "contactMe", title: 'Contact Me', icon: <EmailOutlinedIcon fontSize='large' />}
+        {id: "home", title: 'Home', icon: <HomeOutlinedIcon />},
+        {id: "profile", title: 'Profile', icon: <Person2OutlinedIcon />},
+        {id: "experience", title: 'Experience', icon: <LightbulbOutlinedIcon />},
+        {id: "myWork", title: 'My Work', icon: <WorkOutlineOutlinedIcon />},
+        {id: "contactMe", title: 'Contact Me', icon: <EmailOutlinedIcon />}
     ];
     const [isOpen, setOpen] = useState(false);
     const handleIsOpen = () => {
