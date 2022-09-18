@@ -2,10 +2,11 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
-  fadeInRight,
+  fadeInUp,
   animationContainer
 } from '../animations/variants';
 import styled from '@emotion/styled';
+import Avator from '../assets/avator.png';
 
 export const Home: React.FC = () => {
   const controls = useAnimation();
@@ -28,10 +29,10 @@ export const Home: React.FC = () => {
       animate={controls}
       variants={animationContainer}
     >
-      <Title variants={fadeInRight}>
-        <Heading>Moe</Heading>
-        <Emoji>👩🏻‍💻💬👩🏻‍🎨💡</Emoji><br/>
-        <Heading>Numasawa.</Heading>
+      <Title variants={fadeInUp}>
+        <AvatorImage src={Avator} alt="My avator" />
+        <Heading>Moe Numasawa</Heading>
+        <Text>CS Student at the University of Alberta</Text>
       </Title>
     </HomeSection>
   );
@@ -45,21 +46,37 @@ const HomeSection = styled(motion.section)`
 `;
 
 const Title = styled(motion.div)`
-  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 `;
 
 const Heading = styled.h1`
   display: inline;
   font-style: normal;
   font-weight: 700;
-  font-size: 11vw;
-  line-height: 9vw;
-  margin: 0;
+  font-size: 4vw;
+  line-height: 5vw;
+  margin: 0.7rem 0;
+  letter-spacing: 1vw;
 `;
 
-const Emoji = styled.span`
-  font-size: 6vw;
-  line-height: 3vw;
-  margin-left: 10vw;
-  padding-bottom: 10vw;
+const Emojis = styled.span`
+  font-size: 3vw;
+  margin-top: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+const AvatorImage = styled.img`
+  width: 9vw;
+`;
+
+const Text = styled.div`
+  font-size: 1.3vw;
+  font-weight: 300;
+  letter-spacing: 0.4vw;
+  line-height: 2vw;
 `;

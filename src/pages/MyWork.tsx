@@ -171,8 +171,9 @@ const SectionTitle = styled(motion.h2)`
     font-size: 3vw;
     font-weight: 700;
     margin: 0;
-    margin-left: 15.5vw;
-    margin-bottom: 2.5vw;
+    letter-spacing: 0.5vw;
+    text-align: center;
+    margin-bottom: 1.5vw;
 `;
 
 const Flex = styled(motion.div)`

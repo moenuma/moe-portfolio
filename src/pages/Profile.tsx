@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styled from '@emotion/styled';
-import ProfileImage from '../assets/profile-image.jpg';
 import {
   fadeInUp,
   fadeInRight,
@@ -39,7 +38,6 @@ const ProfileSkillList: React.FC<ProfileSkillListProps> = ({ title, skillList, c
     flex-direction: column;
     text-align: center;
     width: 16vw;
-    // background-color: rgba(255, 255, 255, 0.375);
     background-color: hsl(${color}, 70%, 80%);
     padding: 1vw;
     border-radius: 1.5vw;
@@ -86,14 +84,11 @@ export const Profile: React.FC = () => {
       variants={animationContainer}
     >
       <SectionTitle variants={fadeInRight}>Profile</SectionTitle>
-      <ImageTextsWrapper>
-        <MyImage src={ProfileImage} alt="My photo" variants={fadeInRight}/>
         <Texts variants={fadeInLeft}>
-          <Text>I am a fourth year student, majoring in computer science at the <Bold>University of Alberta</Bold>. </Text><br/>
-          <Text>I was born and raised in <Bold>Japan</Bold>. But I moved to <Bold>Malaysia</Bold> when I was 14 and spent 5 years living there. After high school, I decided to pursue my bachelor's degree in <Bold>Canada</Bold>, and here I am! </Text><br/>
+          <Text>I am a fourth year student, majoring in computer science at the University of Alberta. </Text><br/>
+          <Text>I was born and raised in Japan. But I moved to Malaysia when I was 14 and spent 5 years living there. After high school, I decided to pursue my bachelor's degree in Canada, and here I am! </Text><br/>
           <Text>My inquiring mind never stops me from learning more about software engineering every single day. I am a fast learner and have great adaptability as I have grown up in different parts of the world throughout my life.</Text><br/>
         </Texts>
-      </ImageTextsWrapper>
       <SkillListsWrapper>
         <ProfileSkillList title="Backend" skillList={backendSkills} color="var(--hue)"/>
         <ProfileSkillList title="Frontend" skillList={frontendSkills} color="var(--hue-complimentary1)"/>
@@ -105,8 +100,8 @@ export const Profile: React.FC = () => {
 
 export const Section = styled(motion.section)`
   z-index: 100;
-  padding-left: 15vw;
-  padding-right: 20vw;
+  padding-left: 17vw;
+  padding-right: 17vw;
   padding-bottom: 13vw;
   padding-top: 2vw;
 `;
@@ -115,7 +110,8 @@ export const SectionTitle = styled(motion.h2)`
   font-size: 3vw;
   font-weight: 700;
   margin: 0;
-  margin-left: 0.5vw;
+  letter-spacing: 0.5vw;
+  text-align: center;
 `;
 
 const Text = styled.div`
@@ -131,18 +127,8 @@ const Texts = styled(motion.div)`
   text-align: center;
   margin: 0;
   margin-left: 1vw;
+  margin-top: 2vw;
   padding: 0vw 2vw;
-`;
-
-const MyImage = styled(motion.img)`
-  width: 13vw;
-  border-radius: 1.5vw;
-`;
-
-const ImageTextsWrapper = styled.div`
-  margin-top: 1.5vw;
-  display: flex;
-  align-items: center;
 `;
 
 const SkillListsWrapper = styled.div`
