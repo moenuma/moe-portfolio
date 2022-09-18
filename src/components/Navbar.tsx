@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { push as Menu } from 'react-burger-menu';
 import './Navbar.css';
 import { Link } from 'react-scroll';
-import './Sidebar.css';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
 import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';

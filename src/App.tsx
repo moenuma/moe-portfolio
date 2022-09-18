@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { Sidebar } from './components/Sidebar';
 import { Home } from './pages/Home';
 import { Profile } from './pages/Profile';
 import { Experience } from './pages/Experience';
 import { MyWork } from './pages/MyWork';
 import { background } from './background';
+import { Navbar } from './components/Navbar';
 
 export const App: React.FC = () => {
   
@@ -16,11 +16,13 @@ export const App: React.FC = () => {
   return (
     <>
       <canvas className="orb-canvas" />
-      <Sidebar />
-      <Home />
-      <Profile />
-      <Experience />
-      <MyWork />
+      <Navbar />
+      <div id="page-wrap">
+        <Home />
+        <Profile />
+        <Experience />
+        <MyWork />
+      </div>
     </>
   );
 }
