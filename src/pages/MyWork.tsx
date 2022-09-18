@@ -163,7 +163,7 @@ export const MyWork: React.FC = () => {
 
 const MyWorkSection = styled(motion.section)`
     position: relative;
-    padding-bottom: 10vw;
+    padding-bottom: 13vw;
     padding-top: 2vw;
 `;
 

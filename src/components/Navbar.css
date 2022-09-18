@@ -45,12 +45,12 @@
 
 .bm-item-list {
     padding-left: 1.2vw;
+    padding-right: 1.4vw;
 }
 
 .bm-item-list a {
     display: flex !important;
     align-items: center;
-    margin-right: 1vw;
     padding: 0.6vw;
     padding-right: 5vw;
     margin-bottom: 1vw;

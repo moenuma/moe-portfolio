@@ -92,7 +92,8 @@ export const Experience: React.FC = () => {
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 1vw;
+    margin-top: 1.7vw;
+    letter-spacing: 0.05vw;
 `;
 
 const CompanyIcon = styled.img`
@@ -165,6 +166,7 @@ const RolesSkillsWrapper = styled.div`
 
 const SkillsWrapper = styled.div`
     display: inline-block;
+    letter-spacing: 0;
 `;
 
 const Skill = styled.span`

@@ -129,6 +129,7 @@ const Texts = styled(motion.div)`
   margin-left: 1vw;
   margin-top: 2vw;
   padding: 0vw 2vw;
+  letter-spacing: 0.05vw;
 `;
 
 const SkillListsWrapper = styled.div`
