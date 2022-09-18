@@ -152,16 +152,15 @@ strong {
 
 .swiper{
     width: calc(100% - 35vw);
-    margin-left: 15vw !important;
     padding-bottom: 4vw !important;
 }
 
 .swiper-button-prev {
-    left: 10vw !important;
+    left: 14vw !important;
 }
 
 .swiper-button-next {
-    right: 15vw !important;
+    right: 14vw !important;
 }
 
 .swiper-pagination {
