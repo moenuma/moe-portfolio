@@ -5,8 +5,10 @@ import { Section, SectionTitle } from './Profile';
 import {
     fadeInUp,
     fadeInRight,
+    fadeInLeft,
     animationContainer
 } from "../animations/variants";
+import AvatorCelebrate from '../assets/avator-celebrate.png';
 import styled from '@emotion/styled';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -34,17 +36,24 @@ export const ContactMe: React.FC = () => {
             variants={animationContainer}
         >
             <SectionTitle variants={fadeInRight}>Contact Me</SectionTitle>
-            <Text variants={fadeInUp}>I'm looking for an internship position starting winter 2023. Please contact me if you have any positions available for me. Thank you in advance and I'm excited to have a chat with you soon!</Text>
-            <PlatformsWrapper>
-                <Platforms>
-                    <Platform variants={fadeInUp}><LinkedInIcon /><PlatformName>LinkedIn</PlatformName><Link href='https://www.linkedin.com/in/moe-numasawa/'>https://www.linkedin.com/in/moe-numasawa/</Link></Platform>
-                    <Platform variants={fadeInUp}><GitHubIcon /><PlatformName>GitHub</PlatformName><Link href='https://github.com/moenuma'>https://github.com/moenuma</Link></Platform>
-                    <Platform variants={fadeInUp}><EmailIcon /><PlatformName>Email</PlatformName><Email>moenumasawa@gmail.com</Email></Platform>
-                </Platforms>
-            </PlatformsWrapper>
+            <Content>
+                <Text variants={fadeInUp}>I'm looking for an internship position starting winter 2023. Please contact me if you have any positions available for me. Thank you in advance and I'm excited to have a chat with you soon!</Text>
+                <PlatformsWrapper>
+                    <Platforms>
+                        <Platform variants={fadeInUp}><LinkedInIcon /><PlatformName>LinkedIn</PlatformName><Link href='https://www.linkedin.com/in/moe-numasawa/'>https://www.linkedin.com/in/moe-numasawa/</Link></Platform>
+                        <Platform variants={fadeInUp}><GitHubIcon /><PlatformName>GitHub</PlatformName><Link href='https://github.com/moenuma'>https://github.com/moenuma</Link></Platform>
+                        <Platform variants={fadeInUp}><EmailIcon /><PlatformName>Email</PlatformName><Email>moenumasawa@gmail.com</Email></Platform>
+                    </Platforms>
+                </PlatformsWrapper>
+                <AvatorImage src={AvatorCelebrate} alt='Celebrate avator' variants={fadeInLeft} />
+            </Content>
         </Section>
     );
 }
+
+const Content = styled.div`
+    position: relative;
+`;
 
 const Text = styled(motion.div)`
     font-size: 15.5px;
@@ -60,7 +69,7 @@ const Platform = styled(motion.div)`
     font-size: 15.5px;
     letter-spacing: 1.5px;
     display: flex;
-    margin: 14.5px auto;
+    margin: 16px auto;
     align-items: center;
 `;
 
@@ -94,6 +103,13 @@ const Email = styled.span`
 
 const Platforms = styled.div`
     display: inline-block;
-    margin-top: 58px;
+    margin-top: 40px;
     margin-bottom: 87px;
+`;
+
+const AvatorImage = styled(motion.img)`
+    position:absolute;
+    bottom:0;
+    right:0;
+    width: 150px;
 `;

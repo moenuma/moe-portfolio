@@ -148,7 +148,7 @@ const MoreToCome: React.FC = () => {
         font-weight: 300;
         letter-spacing: 1px;
     `;
-    
+
     const hoverAnimationControls = useAnimation();
     return (
         <Wrapper variants={fadeInUp}>
