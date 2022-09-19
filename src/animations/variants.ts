@@ -50,3 +50,12 @@ export const fadeInLeft = {
     }
   }
 };
+
+export const hoverUpAnimation = {
+  init: {
+      y: 0,
+  },
+  anim: {
+      y: -10,
+  },
+};

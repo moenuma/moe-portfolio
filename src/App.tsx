@@ -12,6 +12,8 @@ export const App: React.FC = () => {
   
   useEffect(() => {
     background();
+    // var canvas = document.getElementsByTagName('canvas')[0];
+    // canvas.width = window.outerWidth;
   }, []);
 
   return (

@@ -35,11 +35,13 @@ export const ContactMe: React.FC = () => {
         >
             <SectionTitle variants={fadeInRight}>Contact Me</SectionTitle>
             <Text variants={fadeInUp}>I'm looking for an internship position starting winter 2023. Please contact me if you have any positions available for me. Thank you in advance and I'm excited to have a chat with you soon!</Text>
-            <Platforms>
-                <Platform variants={fadeInUp}><LinkedInIcon /><PlatformName>LinkedIn</PlatformName><Link href='https://www.linkedin.com/in/moe-numasawa/'>https://www.linkedin.com/in/moe-numasawa/</Link></Platform>
-                <Platform variants={fadeInUp}><GitHubIcon /><PlatformName>GitHub</PlatformName><Link href='https://github.com/moenuma'>https://github.com/moenuma</Link></Platform>
-                <Platform variants={fadeInUp}><EmailIcon /><PlatformName>Email</PlatformName><Email>moenumasawa@gmail.com</Email></Platform>
-            </Platforms>
+            <PlatformsWrapper>
+                <Platforms>
+                    <Platform variants={fadeInUp}><LinkedInIcon /><PlatformName>LinkedIn</PlatformName><Link href='https://www.linkedin.com/in/moe-numasawa/'>https://www.linkedin.com/in/moe-numasawa/</Link></Platform>
+                    <Platform variants={fadeInUp}><GitHubIcon /><PlatformName>GitHub</PlatformName><Link href='https://github.com/moenuma'>https://github.com/moenuma</Link></Platform>
+                    <Platform variants={fadeInUp}><EmailIcon /><PlatformName>Email</PlatformName><Email>moenumasawa@gmail.com</Email></Platform>
+                </Platforms>
+            </PlatformsWrapper>
         </Section>
     );
 }
@@ -68,6 +70,7 @@ const PlatformName = styled.div`
 `;
 
 const Link = styled.a`
+    font-size: 14.5px;
     color: black;
     cursor: pointer;
     text-decoration: underline;
@@ -79,10 +82,18 @@ const Link = styled.a`
     }
 `;
 
-const Email = styled.span``;
+const PlatformsWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+const Email = styled.span`
+    font-size: 14.5px;
+`;
 
 const Platforms = styled.div`
-    margin-left: 95px;
+    display: inline-block;
     margin-top: 58px;
     margin-bottom: 87px;
 `;
