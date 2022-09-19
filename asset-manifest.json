@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.37958cd5.css",
-    "main.js": "/static/js/main.cc3510da.js",
+    "main.js": "/static/js/main.a48b50a1.js",
     "static/media/yoga-image.jpg": "/static/media/yoga-image.ab07284e2bb3c2791ff1.jpg",
     "static/media/social-media-image.jpg": "/static/media/social-media-image.166b456f15a4f9f83ba4.jpg",
     "static/media/home-image.jpg": "/static/media/home-image.a8763d0d32e4a9646413.jpg",
+    "static/media/avator-celebrate.png": "/static/media/avator-celebrate.ac1af149191787c1ffed.png",
     "static/media/avator.png": "/static/media/avator.e52434c7af26c1612419.png",
     "static/media/arsaga-icon.jpeg": "/static/media/arsaga-icon.ee869ff4b386c2d1a7fb.jpeg",
     "index.html": "/index.html",
     "main.37958cd5.css.map": "/static/css/main.37958cd5.css.map",
-    "main.cc3510da.js.map": "/static/js/main.cc3510da.js.map"
+    "main.a48b50a1.js.map": "/static/js/main.a48b50a1.js.map"
   },
   "entrypoints": [
     "static/css/main.37958cd5.css",
-    "static/js/main.cc3510da.js"
+    "static/js/main.a48b50a1.js"
   ]
 }
