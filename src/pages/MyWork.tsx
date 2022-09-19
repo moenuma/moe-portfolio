@@ -44,26 +44,29 @@ const WorkComponent: React.FC<WorkComponentProps> = ({
         aspect-ratio: 1/1.6;
         box-shadow: 0 0.75vw 2vw 0 rgba(0, 0, 0, 0.1);
         color: white;
-        margin-top: 1vw;
+        margin-top: 14.5px;
     `;
     const Content = styled.div`
         align-self: flex-end;
-        margin-bottom: 0.25vw;
+        margin-bottom: 3.6px;
         position: absolute;
-        padding: 1vw;
+        padding: 14px;
         width: 100%;
         display: flex;
         flex-direction: column;
     `;
     const GithubButton = styled.button`
         all: unset;
-        width: 5vw;
-        margin-top: 0.8vw;
-        font-size: 1vw;
+        width: 80px;
+        margin-top: 11px;
+        font-size: 14.5px;
         display: flex;
         justify-content: space-between;
-        border: 0.05vw solid white;
-        padding: 0.4vw;
+        border: 0.8px solid white;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 5px;
+        padding-right: 0;
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -163,17 +166,17 @@ export const MyWork: React.FC = () => {
 
 const MyWorkSection = styled(motion.section)`
     position: relative;
-    padding-bottom: 13vw;
-    padding-top: 2vw;
+    padding-bottom: 188px;
+    padding-top: 30px;
 `;
 
 const SectionTitle = styled(motion.h2)`
-    font-size: 3vw;
-    font-weight: 700;
     margin: 0;
-    letter-spacing: 0.5vw;
     text-align: center;
     margin-bottom: 1.5vw;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 7px;
 `;
 
 const Flex = styled(motion.div)`
@@ -183,22 +186,22 @@ const Flex = styled(motion.div)`
 
 const Title = styled.h3`
     margin: 0;
-    font-size: 2.7vw;
-    line-height: 2.5vw;
+    font-size: 38px;
+    line-height: 36px;
 `;
 
 const Description = styled.div`
-    margin-top: 0.5vw;
+    margin-top: 7px;
     font-weight: 600;
-    font-size: 1vw;
-    margin-bottom: 0.2vw;
+    font-size: 14px;
+    margin-bottom: 3px;
 `;
 
 const Language = styled.span`
-    margin-right: 0.5vw;
+    margin-right: 7px;
     display: inline-block;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 14px;
     &:before {
         content: "#";
     }

@@ -45,26 +45,26 @@ export const ContactMe: React.FC = () => {
 }
 
 const Text = styled(motion.div)`
-    font-size: 1.1vw;
+    font-size: 15.5px;
     font-weight: 400;
-    letter-spacing: 0.1vw;
-    line-height: 1.5vw;
+    letter-spacing: 1.5px;
+    line-height: 22px;
     text-align: center;
-    margin: 1vw 2.5vw;
-    margin-top: 2.5vw;
+    margin: 14.5px 36px;
+    margin-top: 36.5px;
 `;
 
 const Platform = styled(motion.div)`
-    font-size: 1.1vw;
-    letter-spacing: 0.1vw;
+    font-size: 15.5px;
+    letter-spacing: 1.5px;
     display: flex;
-    margin: 1vw auto;
+    margin: 14.5px auto;
     align-items: center;
 `;
 
 const PlatformName = styled.div`
     font-weight: 500;
-    width: 6vw;
+    width: 87px;
 `;
 
 const Link = styled.a`
@@ -82,7 +82,7 @@ const Link = styled.a`
 const Email = styled.span``;
 
 const Platforms = styled.div`
-    margin-left: 25%;
-    margin-top: 4vw;
-    margin-bottom: 6vw;
+    margin-left: 95px;
+    margin-top: 58px;
+    margin-bottom: 87px;
 `;

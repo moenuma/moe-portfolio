@@ -1,20 +1,23 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
     position: fixed;
-    width: 2.25vw;
-    height: 1.85vw;
-    left: 1.9vw;
-    top: 1.9vw;
+    width: 33px;
+    height: 28px;
+    left: 30px;
+    top: 30px;
 }
   
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-    background: #373a47;
+    transition: all 0.1s ease-in-out;
+    background: #000000;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-    background: var(--complimentary2);
+    transition: all 0.1s ease-in-out;
+    opacity: 0.7 !important;
+    background: black;
 }
 
 /* Position and sizing of clickable cross button */
@@ -44,20 +47,20 @@
 }
 
 .bm-item-list {
-    padding-left: 1.2vw;
-    padding-right: 1.4vw;
+    padding-left: 17px;
+    padding-right: 20px;
 }
 
 .bm-item-list a {
     display: flex !important;
     align-items: center;
-    padding: 0.6vw;
-    padding-right: 5vw;
-    margin-bottom: 1vw;
+    padding: 8.8px;
+    padding-right: 72.5px;
+    margin-bottom: 14.5px;
     text-decoration: none;
     font-weight: 400;
-    font-size: 1.1vw;
-    border-radius: 0.7vw;
+    font-size: 15.5px;
+    border-radius: 10px;
     transition: all 0.1s ease-in-out;
     cursor: pointer;
 }
@@ -68,7 +71,7 @@
 }
 
 .bm-item-list a:first-child {
-    margin-top: 3vw;
+    margin-top: 48px;
 }
 
 .bm-menu a {
@@ -82,7 +85,7 @@
 }
 
 .MuiSvgIcon-root {
-    width: 1.7vw !important;
-    height: 1.7vw !important;
-    margin-right: 0.7vw;
+    width: 23px !important;
+    height: 23px !important;
+    margin-right: 10px;
 }

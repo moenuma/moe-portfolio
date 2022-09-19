@@ -92,21 +92,21 @@ export const Experience: React.FC = () => {
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 1.7vw;
-    letter-spacing: 0.05vw;
+    margin-top: 25px;
+    letter-spacing: 0.7px;
 `;
 
 const CompanyIcon = styled.img`
-    width: 5vw;
-    height: 5vw;
+    width: 70px;
+    height: 70px;
 `;
 
 const Card = styled(motion.div)`
-    margin: 0.8vw 0;
-    padding: 1.5vw;
+    margin-bottom: 24px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0.75vw 2vw 0 rgba(0, 0, 0, 0.1);
-    border-radius: 1.5vw;
+    border-radius: 22px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 `;
 
@@ -120,11 +120,12 @@ const CompanyName = styled.a`
     }
 `;
 
-const PositionName = styled.span``;
+const PositionName = styled.span`
+`;
 
 const ExperienceDate = styled.span`
     color: var(--dark-gray-text-color);
-    font-size: 0.9vw;
+    font-size: 14px;
     font-weight: 600;
 `;
 
@@ -132,8 +133,8 @@ const MainDescription = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0.3vw 1vw;
-    font-size: 1.1vw;
+    margin: 4.5px 14.5px;
+    font-size: 15px;
 `;
 
 const IconMainDescriptionWrapper = styled.div`
@@ -143,25 +144,25 @@ const IconMainDescriptionWrapper = styled.div`
 const RolesWrapper = styled.ul`
     margin-block-start: 0;
     margin-block-end: 0;
-    font-size: 1.05vw;
+    font-size: 15px;
     font-weight: 300;
 `;
 
 const Role = styled.li`
-    margin: 0.2vw 0;
+    margin: 3px 0;
 `;
 
 const DescriptionTitle = styled.span`
-    font-size: 1.1vw;
+    font-size: 15px;
     font-weight: 600;
-    margin-top: 0.8vw;
-    margin-bottom: 0.3vw;
+    margin-top: 9px;
+    margin-bottom: 4px;
 `;
 
 const RolesSkillsWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin-left: 0.5vw;
+    margin-left: 5px;
 `;
 
 const SkillsWrapper = styled.div`
@@ -172,10 +173,11 @@ const SkillsWrapper = styled.div`
 const Skill = styled.span`
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.5);
-    font-size: 1vw;
+    font-size: 14.5px;
     border-radius: 15px;
-    padding: 0.2vw 0.5vw;
-    margin: 0.25vw 0.3vw;
-    margin-bottom: 0;
+    padding: 3px 7px;
+    margin-right: 3.5px;
+    margin-top: 3px;
+    margin-bottom: 5px;
     border: 1px solid var(--dark-gray-text-color);
 `;

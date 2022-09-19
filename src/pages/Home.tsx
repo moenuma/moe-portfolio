@@ -53,24 +53,23 @@ const Title = styled(motion.div)`
   align-items: center;
 `;
 
-// 1vw = 16px
 const Heading = styled.h1`
   display: inline;
   font-style: normal;
   font-weight: 700;
-  font-size: 64px;
-  line-height: 80px;
-  margin: 12px 0;
-  letter-spacing: 16px;
+  font-size: 57.4px;
+  line-height: 72px;
+  margin: 10px 0;
+  letter-spacing: 15px;
 `;
 
 const AvatorImage = styled.img`
-  width: 144px;
+  width: 130px;
 `;
 
 const Text = styled.div`
-  font-size: 21px;
+  font-size: 18.5px;
   font-weight: 300;
-  letter-spacing: 6.4px;
-  line-height: 32px;
+  letter-spacing: 5.8px;
+  line-height: 29px;
 `;
